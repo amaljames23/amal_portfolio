@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Amal James - Portfolio</title>
-  <meta name="description" content="Amal James - Python Developer Portfolio">
-  <meta name="keywords" content="Python, Developer, Portfolio, Django, Flask">
+  <title>Amal James - Python/AI Developer Portfolio</title>
+  <meta name="description" content="Amal James - Professional Python Developer specializing in Django, Flask, Blockchain, and AI technologies">
+  <meta name="keywords" content="Python, Developer, Portfolio, Django, Flask, AI, Blockchain, UAE">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -28,23 +28,108 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* Custom styles for page section visibility */
     .page-section {
       display: none;
     }
     
     .page-section.active {
       display: block;
-    }
-    
-    /* Optional: Add smooth transitions */
-    .page-section {
       opacity: 0;
-      transition: opacity 0.5s ease;
+      animation: fadeIn 0.5s ease forwards;
     }
     
-    .page-section.active {
-      opacity: 1;
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Projects Section Styles */
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 30px;
+      height: 100%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 3px solid #0563bb;
+    }
+
+    .project-content {
+      padding: 30px;
+    }
+
+    .project-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0563bb;
+      margin-bottom: 15px;
+    }
+
+    .project-description {
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .tech-stack {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 2px solid #f0f0f0;
+    }
+
+    .tech-badge {
+      display: inline-block;
+      background: #0563bb;
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin: 5px 5px 5px 0;
+      font-weight: 500;
+    }
+
+    .project-features {
+      margin-top: 20px;
+    }
+
+    .project-features h5 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .project-features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .project-features ul li {
+      padding: 5px 0;
+      color: #666;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .project-features ul li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #0563bb;
+      font-weight: bold;
     }
   </style>
 
@@ -64,17 +149,16 @@
           <li><a href="#home" class="nav-link active" data-section="home-section">Home</a></li>
           <li><a href="#about" class="nav-link" data-section="about-section">About</a></li>
           <li><a href="#resume" class="nav-link" data-section="resume-section">Resume</a></li>
-          <li><a href="#projects" class="nav-link" data-section="projects-section">Projects</a></li> 
-          
+          <li><a href="#projects" class="nav-link" data-section="projects-section">Projects</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <div class="header-social-links">
-        <a href="https://github.com/amaljames23" class="github"><i class="bi bi-github"></i></a>
-        <a href="mailto:amaljames0007@gmail.com" class="email"><i class="bi bi-envelope-fill"></i></a>
-        <a href="tel:564771140" class="phone"><i class="bi bi-telephone-fill"></i></a>
-        <a href="https://www.linkedin.com/in/amal-james-606291269" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/amaljames23" target="_blank" class="github" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="mailto:amaljames0007@gmail.com" class="email" title="Email"><i class="bi bi-envelope-fill"></i></a>
+        <a href="tel:+971564771140" class="phone" title="Call"><i class="bi bi-telephone-fill"></i></a>
+        <a href="https://www.linkedin.com/in/amal-james-606291269" target="_blank" class="linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
@@ -84,13 +168,13 @@
 
     <!-- Home Section -->
     <section id="home-section" class="hero section page-section active">
-      <img src="assets/img/james-harrison-vpOeXr5wmR4-unsplash.jpg" alt="" data-aos="fade-in">
+      <img src="assets/img/james-harrison-vpOeXr5wmR4-unsplash.jpg" alt="Background" data-aos="fade-in">
 
       <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <h2 style="color: white;">AMAL JAMES</h2>
-            <p style="color: white;">I'm a Python developer based in UAE</p>
+            <p style="color: white;">Python/AI Developer | Django & Flask Specialist | Based in UAE</p>
             <a href="#about" class="btn-get-started" id="about-btn">About Me</a>
           </div>
         </div>
@@ -99,46 +183,36 @@
 
     <!-- About Section -->
     <section id="about-section" class="about section page-section">
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
-        <p>Highly adaptable and skilled professional with a unique blend of
-          experiences, encompassing full-stack Python development,
-          Blockchain technology, Django, Flask framework, and Android
-          development.</p>
+        <p>Highly adaptable and skilled professional with a unique blend of experiences, encompassing full-stack Python development, Blockchain technology, Django, Flask framework, and Android development.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="assets/img/IMG_0381.JPG" class="img-fluid" alt="">
+            <img src="assets/img/IMG_0381.JPG" class="img-fluid" alt="Amal James">
           </div>
           <div class="col-lg-8 content">
             <h2>PYTHON/AI Developer</h2>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>01 JUNE 2001</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>56 477 1140</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>ABU DHABI,UAE</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>01 June 2001</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+971 56 477 1140</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Abu Dhabi, UAE</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Computer Application</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>amaljames007@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>amaljames0007@gmail.com</span></li>
                 </ul>
               </div>
             </div>
             <p class="py-3">
-              Emerged into a career focused on guiding individuals in their
-              professional journeys, cultivating adept communication skills and
-              mentorship capabilities. Remains resolute in the quest for
-              ongoing advancement, leveraging expertise in full-stack Python
-              development, Blockchain technology, Django, Flask framework,
-              and Android development to surmount complex obstacles and
-              propel organizational achievements.
+              Passionate software engineer with expertise in full-stack Python development, specializing in Django and Flask frameworks. Experienced in creating scalable web solutions, implementing Blockchain technology, and developing educational projects. Committed to continuous learning and leveraging cutting-edge technologies including AI/ML to solve complex problems and drive organizational success.
             </p>
           </div>
         </div>
@@ -147,7 +221,7 @@
       <!-- Skills Section -->
       <section id="skills" class="skills section">
         <div class="container section-title" data-aos="fade-up">
-          <h2>Skills</h2>
+          <h2>Technical Skills</h2>
         </div>
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row skills-content skills-animation">
@@ -173,19 +247,19 @@
             </div>
             <div class="col-lg-6">
               <div class="progress">
-                <span class="skill"><span>PYTHON</span> <i class="val">80%</i></span>
+                <span class="skill"><span>Python</span> <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
               <div class="progress">
-                <span class="skill"><span>DJANGO</span> <i class="val">90%</i></span>
+                <span class="skill"><span>Django</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
               <div class="progress">
-                <span class="skill"><span>FLASK</span> <i class="val">90%</i></span>
+                <span class="skill"><span>Flask</span> <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -198,52 +272,50 @@
 
     <!-- Resume Section -->
     <section id="resume-section" class="resume section page-section">
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-      </div><!-- End Section Title -->
+        <p>My professional journey and qualifications</p>
+      </div>
 
       <div class="container">
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Software Engineer</h3>
+            <h3 class="resume-title">Professional Experience</h3>
 
             <div class="resume-item pb-0">
-              <h4>RISS Technologies  2023-Present</h4>
-              <p><em>Specialized in Django and Flask web development, designing
-                and implementing scalable solutions for diverse projects.</em></p>
+              <h4>Software Engineer</h4>
+              <h5>JUNE 2023 - September 2025 </h5>
+              <p><em>RISS Technologies, Kochi</em></p>
               <ul>
-                <li>Demonstrated expertise in creating educational projects for
-                  academic students, contributing to their practical learning
-                  experience in web development.</li>
-                <li>Provided mentorship and guidance to students, emphasizing the
-                  importance of industry conventions and recommended
-                  guidelines.</li>
+                <li>Specialized in Django and Flask web development, designing and implementing scalable solutions for diverse projects</li>
+                <li>Demonstrated expertise in creating educational projects for academic students, contributing to their practical learning experience in web development</li>
+                <li>Provided mentorship and guidance to students, emphasizing industry conventions and recommended best practices</li>
+                <li>Developed and deployed full-stack applications using modern Python frameworks</li>
               </ul>
-            </div><!-- End Resume Item -->
+            </div>
 
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
               <h4>Bachelor of Computer Application</h4>
               <h5>2019 - 2022</h5>
               <p><em>Affiliated to University of Kerala</em></p>
-            </div><!-- End Resume Item -->
+            </div>
 
             <div class="resume-item">
               <h4>Higher Secondary Education</h4>
               <h5>2017 - 2019</h5>
-              <p><em>Higher Secondary Education Science</em></p>
-            </div><!-- End Resume Item -->
+              <p><em>Science Stream</em></p>
+            </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Skills</h3>
+            <h3 class="resume-title">Technical Skills</h3>
             <div class="resume-item">
               <h4>Programming Languages</h4>
               <ul>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>HTML/CSS</li>
+                <li>Python (Advanced)</li>
+                <li>JavaScript (Intermediate)</li>
+                <li>HTML5 & CSS3 (Advanced)</li>
               </ul>
             </div>
             
@@ -251,15 +323,16 @@
               <h4>Frameworks & Technologies</h4>
               <ul>
                 <li>Django & Django REST Framework</li>
-                <li>Flask</li>
+                <li>Flask & Flask-RESTful</li>
                 <li>Blockchain Technology</li>
                 <li>Android Development</li>
                 <li>RESTful API Design</li>
+                <li>AI/ML Libraries</li>
               </ul>
             </div>
             
             <div class="resume-item">
-              <h4>Soft Skills</h4>
+              <h4>Professional Skills</h4>
               <ul>
                 <li>Mentorship & Teaching</li>
                 <li>Problem Solving</li>
@@ -272,25 +345,109 @@
       </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects-section" class="projects section page-section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>Innovative solutions leveraging AI and Blockchain technology</p>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          
+          <!-- Project 1: Deepfake Detection -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+              <img src="/assets/img/deepfake-detection.jpg" alt="Deepfake Detection System" class="project-img">
+              <div class="project-content">
+                <h3 class="project-title">
+                  <i class="bi bi-robot"></i> AI-Powered Deepfake Detection System
+                </h3>
+                <p class="project-description">
+                  With the rise of AI-generated media, detecting deepfakes is crucial for verifying digital content authenticity. This project develops a comprehensive Deepfake Image Classification system using advanced deep learning techniques to identify manipulated media with high accuracy.
+                </p>
+
+                <div class="project-features">
+                  <h5>Key Features:</h5>
+                  <ul>
+                    <li>CNN architecture for deep feature extraction</li>
+                    <li>Real-time image classification</li>
+                    <li>Advanced preprocessing pipeline</li>
+                    <li>Captures subtle facial inconsistencies</li>
+                    <li>Multi-metric evaluation system</li>
+                  </ul>
+                </div>
+
+                <div class="tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">TensorFlow</span>
+                  <span class="tech-badge">Keras</span>
+                  <span class="tech-badge">OpenCV</span>
+                  <span class="tech-badge">NumPy</span>
+                  <span class="tech-badge">CNN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Blockchain Voting -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card">
+              <img src="/assets/img/blockchain-voting.jpg" alt="Blockchain Voting System" class="project-img">
+              <div class="project-content">
+                <h3 class="project-title">
+                  <i class="bi bi-shield-check"></i> Blockchain-Based Voting System
+                </h3>
+                <p class="project-description">
+                  A revolutionary secure, transparent, and efficient electronic voting system designed for university elections. This project leverages blockchain technology's inherent security features to address traditional voting challenges including fraud and tampering.
+                </p>
+
+                <div class="project-features">
+                  <h5>Key Features:</h5>
+                  <ul>
+                    <li>Decentralized architecture</li>
+                    <li>Immutable vote recording</li>
+                    <li>Cryptographic security</li>
+                    <li>Transparent audit trail</li>
+                    <li>Real-time vote tallying</li>
+                    <li>Smart contract automation</li>
+                  </ul>
+                </div>
+
+                <div class="tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">Blockchain</span>
+                  <span class="tech-badge">Smart Contracts</span>
+                  <span class="tech-badge">Django</span>
+                  <span class="tech-badge">Cryptography</span>
+                  <span class="tech-badge">Web3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer id="footer" class="footer light-background">
     <div class="container">
       <div class="copyright text-center">
-        <p>© <span>Copyright</span> <strong class="px-1">Amal James</strong> <span>All Rights Reserved<br></span></p>
+        <p>&copy; <span>Copyright 2024</span> <strong class="px-1">Amal James</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/amaljames23" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://github.com/amaljames23" target="_blank" class="github"><i class="bi bi-github"></i></a>
         <a href="mailto:amaljames0007@gmail.com" class="email"><i class="bi bi-envelope-fill"></i></a>
-        <a href="tel:564771140" class="phone"><i class="bi bi-telephone-fill"></i></a>
-        <a href="https://www.linkedin.com/in/amal-james-606291269" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="tel:+971564771140" class="phone"><i class="bi bi-telephone-fill"></i></a>
+        <a href="https://www.linkedin.com/in/amal-james-606291269" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
   </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -306,68 +463,45 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Custom Section Navigation Script -->
+  <!-- Custom Navigation Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Get all nav links
       const navLinks = document.querySelectorAll('.nav-link');
       
-      // Add click event listener to each nav link
       navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
           e.preventDefault();
           
-          // Remove active class from all nav links
-          navLinks.forEach(item => {
-            item.classList.remove('active');
-          });
-          
-          // Add active class to clicked nav link
+          navLinks.forEach(item => item.classList.remove('active'));
           this.classList.add('active');
           
-          // Get the section id from data attribute
           const sectionId = this.getAttribute('data-section');
           
-          // Hide all sections
-          const allSections = document.querySelectorAll('.page-section');
-          allSections.forEach(section => {
+          document.querySelectorAll('.page-section').forEach(section => {
             section.classList.remove('active');
           });
           
-          // Show the selected section
           const targetSection = document.getElementById(sectionId);
           if (targetSection) {
             targetSection.classList.add('active');
-            // Scroll to top of the section
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
           }
         });
       });
       
-      // Add click event for About Me button on home page
       const aboutBtn = document.getElementById('about-btn');
       if (aboutBtn) {
         aboutBtn.addEventListener('click', function(e) {
           e.preventDefault();
-          
-          // Trigger click on About nav link
           const aboutNavLink = document.querySelector('[data-section="about-section"]');
-          if (aboutNavLink) {
-            aboutNavLink.click();
-          }
+          if (aboutNavLink) aboutNavLink.click();
         });
       }
       
-      // Check if there's a hash in the URL and navigate to that section
       if (window.location.hash) {
-        const hash = window.location.hash.substring(1); // Remove the # character
+        const hash = window.location.hash.substring(1);
         const correspondingNavLink = document.querySelector(`[data-section="${hash}-section"]`);
-        if (correspondingNavLink) {
-          correspondingNavLink.click();
-        }
+        if (correspondingNavLink) correspondingNavLink.click();
       }
     });
   </script>
