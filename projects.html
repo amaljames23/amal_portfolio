@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Projects - Amal James Portfolio</title>
+  <meta name="description" content="Amal James - Project Portfolio including AI Deepfake Detection and Blockchain Voting System">
+  <meta name="keywords" content="Python, AI, Blockchain, Deepfake Detection, Voting System, Projects">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 30px;
+      height: 100%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 3px solid #0563bb;
+    }
+
+    .project-content {
+      padding: 30px;
+    }
+
+    .project-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0563bb;
+      margin-bottom: 15px;
+    }
+
+    .project-description {
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .tech-stack {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 2px solid #f0f0f0;
+    }
+
+    .tech-badge {
+      display: inline-block;
+      background: #0563bb;
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin: 5px 5px 5px 0;
+      font-weight: 500;
+    }
+
+    .project-features {
+      margin-top: 20px;
+    }
+
+    .project-features h5 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .project-features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .project-features ul li {
+      padding: 5px 0;
+      color: #666;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .project-features ul li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #0563bb;
+      font-weight: bold;
+    }
+
+    .projects-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .projects-header h1 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #0563bb;
+      margin-bottom: 15px;
+    }
+
+    .projects-header p {
+      font-size: 18px;
+      color: #666;
+    }
+  </style>
+
+</head>
+
+<body class="projects-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">Amal James</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://github.com/amaljames23" target="_blank" class="github" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="mailto:amaljames0007@gmail.com" class="email" title="Email"><i class="bi bi-envelope-fill"></i></a>
+        <a href="tel:+971564771140" class="phone" title="Call"><i class="bi bi-telephone-fill"></i></a>
+        <a href="https://www.linkedin.com/in/amal-james-606291269" target="_blank" class="linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        
+        <div class="projects-header" data-aos="fade-up">
+          <h1>My Projects</h1>
+          <p>Innovative solutions leveraging AI and Blockchain technology</p>
+        </div>
+
+        <div class="row">
+          
+          <!-- Project 1: Deepfake Detection -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+              <img src="assets/img/projects/deepfake-detection.jpg" alt="Deepfake Detection System" class="project-img">
+              <div class="project-content">
+                <h3 class="project-title">
+                  <i class="bi bi-robot"></i> AI-Powered Deepfake Detection System
+                </h3>
+                <p class="project-description">
+                  With the rise of AI-generated media, detecting deepfakes is crucial for verifying digital content authenticity. This project develops a comprehensive Deepfake Image Classification system using advanced deep learning techniques to identify manipulated media with high accuracy.
+                </p>
+
+                <div class="project-features">
+                  <h5>Key Features:</h5>
+                  <ul>
+                    <li>Convolutional Neural Networks (CNNs) architecture for deep feature extraction</li>
+                    <li>Real-time image classification with immediate results</li>
+                    <li>Advanced preprocessing pipeline for enhanced data quality</li>
+                    <li>Captures subtle facial inconsistencies and artifacts</li>
+                    <li>Comprehensive evaluation using multiple metrics (accuracy, precision, recall, F1-score)</li>
+                    <li>Trained on extensive labeled datasets of real and synthetic images</li>
+                  </ul>
+                </div>
+
+                <div class="tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">TensorFlow</span>
+                  <span class="tech-badge">Keras</span>
+                  <span class="tech-badge">OpenCV</span>
+                  <span class="tech-badge">NumPy</span>
+                  <span class="tech-badge">CNN</span>
+                  <span class="tech-badge">Computer Vision</span>
+                  <span class="tech-badge">Machine Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Blockchain Voting -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card">
+              <img src="assets/img/projects/blockchain-voting.jpg" alt="Blockchain Voting System" class="project-img">
+              <div class="project-content">
+                <h3 class="project-title">
+                  <i class="bi bi-shield-check"></i> Blockchain-Based Voting System
+                </h3>
+                <p class="project-description">
+                  A revolutionary secure, transparent, and efficient electronic voting system designed for university elections. This project leverages blockchain technology's inherent security features to address traditional voting challenges including fraud, tampering, and lack of transparency.
+                </p>
+
+                <div class="project-features">
+                  <h5>Key Features:</h5>
+                  <ul>
+                    <li>Decentralized architecture eliminating single points of failure</li>
+                    <li>Immutable vote recording ensuring data integrity</li>
+                    <li>Cryptographic security for voter authentication</li>
+                    <li>Transparent audit trail for verification</li>
+                    <li>Real-time vote tallying with tamper-proof results</li>
+                    <li>User-friendly interface for seamless voting experience</li>
+                    <li>Smart contracts for automated vote validation</li>
+                  </ul>
+                </div>
+
+                <div class="tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">Blockchain</span>
+                  <span class="tech-badge">Smart Contracts</span>
+                  <span class="tech-badge">Cryptography</span>
+                  <span class="tech-badge">Django</span>
+                  <span class="tech-badge">Web3</span>
+                  <span class="tech-badge">Distributed Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Additional Info Section -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-12">
+            <div class="alert alert-info" style="background: #e7f3ff; border-left: 4px solid #0563bb; border-radius: 8px; padding: 25px;">
+              <h4 style="color: #0563bb; margin-bottom: 15px;">
+                <i class="bi bi-lightbulb"></i> Project Impact
+              </h4>
+              <p style="color: #666; margin-bottom: 10px;">
+                These projects demonstrate expertise in cutting-edge technologies and address real-world challenges. The Deepfake Detection system contributes to digital media authenticity verification, while the Blockchain Voting System enhances electoral integrity and transparency.
+              </p>
+              <p style="color: #666; margin: 0;">
+                Both projects showcase strong technical skills in AI/ML, blockchain technology, and full-stack development, along with the ability to design and implement complex systems that solve practical problems.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>&copy; <span>Copyright 2024</span> <strong class="px-1">Amal James</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/amaljames23" target="_blank" class="github"><i class="bi bi-github"></i></a>
+        <a href="mailto:amaljames0007@gmail.com" class="email"><i class="bi bi-envelope-fill"></i></a>
+        <a href="tel:+971564771140" class="phone"><i class="bi bi-telephone-fill"></i></a>
+        <a href="https://www.linkedin.com/in/amal-james-606291269" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  </script>
+
+</body>
+
+</html>
